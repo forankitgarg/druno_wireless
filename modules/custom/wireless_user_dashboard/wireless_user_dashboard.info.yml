@@ -1,0 +1,5 @@
+name: Wireless User Dashboard
+type: module
+description: User login, forgot password modification.
+core: 8.x
+package: Wireless

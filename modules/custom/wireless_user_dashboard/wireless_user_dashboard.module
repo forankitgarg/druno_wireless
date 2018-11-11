@@ -1,0 +1,30 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ *
+ * @param array $form
+ * @param array FormStateInterface $form_state
+ * @param string $form_id
+ */
+function wireless_user_dashboard_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  switch ($form_id) {
+    case 'user_pass':
+	$form['user_email_start'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Email'),
+		'#attributes' => array('class' => array('container-inline')), 
+		'#size' => 50
+	);
+	$form['user_email_end'] = array(
+		'#type' => 'textfield',
+		'#title' => t('@'),
+		'#attributes' => array('class' => array('container-inline')), 
+		'#size' => 25
+	);
+    break;
+  }
+ 
+}
